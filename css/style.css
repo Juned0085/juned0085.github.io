@@ -1,0 +1,975 @@
+/* Custom CSS */
+:root {
+    /* Professional and High-Contrast Color Palette */
+    --primary-color: #00BCD4; /* Vibrant Cyan (Main accent, high visibility) */
+    --secondary-color: #FFC107; /* Amber/Gold (Secondary accent, complements primary) */
+    --dark-base: #1A2B3C; /* Deep Navy Blue (Base for very dark elements like navbar, footer) */
+    --medium-dark-bg: rgba(26, 43, 60, 0.85); /* Slightly transparent Deep Navy (for About/Education/Cert sections) */
+
+    /* Background Overlays - Adjusted for consistent text visibility */
+    --general-overlay-bg: rgba(26, 43, 60, 0.6); /* Semi-transparent Deep Navy for general sections (provides background context but ensures text contrast) */
+    --profile-gradient-start: rgba(26, 43, 60, 0.95); /* Nearly opaque Deep Navy for profile gradient start */
+    --profile-gradient-end: rgba(0, 188, 212, 0.9); /* Opaque Vibrant Cyan for profile gradient end */
+
+    /* Text Colors - All text will now be light for maximum visibility */
+    --text-color-general: #E0E0E0; /* Light Gray for all general text */
+    --heading-color-general: #FFFFFF; /* Pure White for all major headings */
+
+    /* Card Backgrounds - Will now be consistent and provide strong contrast for light text */
+    --card-background: rgba(26, 43, 60, 0.95); /* Nearly opaque Deep Navy for cards/panels */
+
+    --border-color: rgba(0, 188, 212, 0.6); /* Primary color with transparency for borders */
+    --accent-glow-color: #00E5FF; /* Brighter Cyan for intense glows/highlights (for name) */
+
+    --animation-duration: 0.8s; /* Standard animation duration */
+    --transition-speed: 0.3s; /* For hover effects */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color-general); /* All body text is now light by default */
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    background-image: url('../images/abstract-background-with-low-poly-design.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    position: relative;
+}
+
+/* Background overlay for readability on all sections */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--general-overlay-bg); /* Uniform semi-transparent dark overlay for light text */
+    z-index: -1;
+}
+
+.navbar {
+    background-color: var(--dark-base) !important; /* Deep Navy Blue navbar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    padding: 1rem 0;
+    z-index: 1030;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color-general); /* Light text on dark navbar */
+}
+
+.navbar-brand {
+    color: var(--heading-color-general) !important; /* Light logo text */
+    font-weight: 800;
+    font-size: 1.9rem;
+    text-shadow: 0 0 12px var(--accent-glow-color);
+    transition: all var(--transition-speed) ease;
+}
+.navbar-brand:hover {
+    color: var(--accent-glow-color) !important;
+    transform: scale(1.05);
+}
+
+.nav-link {
+    color: var(--text-color-general) !important; /* Light nav links */
+    font-weight: 500;
+    transition: color var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important; /* Primary accent on hover */
+    transform: translateY(-3px) scale(1.05);
+    text-shadow: 0 0 8px var(--primary-color);
+}
+
+.navbar-toggler-icon {
+    filter: invert(1); /* Ensure toggler icon is visible on dark background */
+}
+
+section {
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent; /* All sections use body overlay unless specified */
+}
+
+/* Specific background for sections that should be slightly darker and opaque */
+#about-me,
+#education,
+#certifications {
+    background-color: var(--medium-dark-bg); /* Slightly transparent Deep Navy */
+    color: var(--text-color-general); /* Light text for these opaque sections */
+}
+
+/* Specific background for the Profile section due to its unique gradient overlay */
+#profile {
+    background: linear-gradient(135deg, var(--profile-gradient-start), var(--profile-gradient-end)); /* Blend of dark-base and primary-dark */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--text-color-general); /* Light text for the profile section */
+}
+
+
+.section-heading {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--heading-color-general); /* All headings are now light */
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    display: inline-block;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Light shadow for light text */
+}
+
+.section-heading::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    background-color: var(--primary-color);
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.7); /* Primary color glow */
+}
+
+.profile-content h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    color: var(--heading-color-general); /* Light heading for profile */
+    margin-bottom: 20px;
+    text-shadow: 0 5px 20px rgba(0, 188, 212, 0.7); /* Primary color shadow */
+}
+
+.profile-content h1 .text-primary {
+    color: var(--accent-glow-color) !important; /* Bright Cyan for the name */
+    text-shadow: 0 0 20px rgba(0, 229, 255, 1); /* Intense glow for the name */
+}
+
+.profile-content p {
+    font-size: 1.6rem;
+    color: var(--text-color-general); /* Light text */
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-image {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 10px solid var(--primary-color);
+    box-shadow: 0 0 30px rgba(0, 188, 212, 0.8);
+}
+
+/* Animation for profile image border */
+.animated-border-pulse {
+    animation: pulseBorder 2s infinite alternate;
+}
+@keyframes pulseBorder {
+    0% { border-color: var(--primary-color); box-shadow: 0 0 30px rgba(0, 188, 212, 0.8); }
+    100% { border-color: var(--accent-glow-color); box-shadow: 0 0 40px rgba(0, 229, 255, 0.9); }
+}
+
+/* Animation for name slide-in */
+.animated-slide-in {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideInFromLeft 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+@keyframes slideInFromLeft {
+    0% { opacity: 0; transform: translateX(-100%); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+.social-icons a {
+    color: var(--text-color-general); /* Light social icons */
+    font-size: 2.5rem;
+    margin: 0 18px;
+    transition: color var(--transition-speed) ease, transform var(--transition-speed) ease;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+.social-icons a:hover {
+    color: var(--primary-color); /* Primary accent on hover */
+    transform: translateY(-7px) scale(1.2);
+    text-shadow: 0 0 15px var(--primary-color);
+}
+
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 14px 35px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all var(--transition-speed) ease;
+    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--heading-color-general) !important; /* Light text for buttons */
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--secondary-color); /* Secondary color on hover */
+    border-color: var(--secondary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 193, 7, 0.6);
+}
+
+.btn-outline-light.btn-primary-custom {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color) !important; /* Text color matches primary border */
+}
+.btn-outline-light.btn-primary-custom:hover {
+    background-color: var(--primary-color);
+    color: var(--heading-color-general) !important;
+    border-color: var(--primary-color);
+}
+
+.btn-primary-custom-small {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 8px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all var(--transition-speed) ease;
+    box-shadow: 0 3px 10px rgba(0, 188, 212, 0.3);
+    color: var(--heading-color-general) !important; /* Light text for buttons */
+    text-decoration: none;
+}
+
+.btn-primary-custom-small:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.5);
+}
+
+.btn-sm.btn-outline-primary-custom {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color) !important;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    border-radius: 30px;
+    transition: all var(--transition-speed) ease;
+}
+.btn-sm.btn-outline-primary-custom:hover {
+    background-color: var(--primary-color);
+    color: var(--heading-color-general) !important;
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Scroll Down Indicator */
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.scroll-down a {
+    display: block;
+    color: var(--primary-color); /* Primary color arrow */
+    font-size: 2.5rem;
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+
+.scroll-down a:hover {
+    color: var(--accent-glow-color);
+}
+
+/* Animated Scroll Down Arrow */
+.animated-scroll-down {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* About Me Section - Flip Effect */
+#about-me {
+    background-color: var(--medium-dark-bg); /* Slightly transparent Deep Navy */
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color-general); /* Light text for this dark section */
+}
+
+.flip-container {
+    perspective: 1000px;
+    width: 100%;
+    max-width: 900px;
+    height: 300px;
+    margin: 0 auto;
+    cursor: pointer;
+    text-align: center;
+}
+
+.flipper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-container:hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.front {
+    background-color: var(--card-background); /* Card background */
+    z-index: 2;
+    transform: rotateY(0deg);
+    flex-direction: column;
+}
+
+.section-heading-flip {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--heading-color-general); /* Light heading for dark section */
+    position: relative;
+    display: inline-block;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    margin-bottom: 0;
+}
+
+.section-heading-flip::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    background-color: var(--primary-color);
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.7); /* Primary color glow */
+}
+
+
+.back {
+    background-color: var(--primary-color); /* Primary color background for the back */
+    color: var(--heading-color-general); /* Light text on primary background */
+    transform: rotateY(180deg);
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.15rem;
+    line-height: 1.9;
+}
+.back p {
+    margin-bottom: 10px;
+    color: inherit;
+}
+
+
+/* Skills Section - New Style */
+#skills {
+    background-color: transparent; /* Transparent, relies on body::before overlay */
+    color: var(--text-color-general); /* Light text for this section */
+}
+
+.skill-card {
+    background-color: var(--card-background); /* Card background */
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease, background-color var(--transition-speed) ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 188, 212, 0.3); /* Primary color shadow on hover */
+    background-color: rgba(26, 43, 60, 0.99); /* More opaque on hover for definition */
+}
+
+.skill-card .skill-icon-colorful {
+    font-size: 3.8rem;
+    margin-bottom: 15px;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-glow-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px rgba(0, 229, 255, 0.7); /* Accent glow */
+}
+
+.skill-card h4 {
+    font-size: 1.6rem;
+    color: var(--heading-color-general); /* Light heading for lighter section */
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+.skill-card p {
+    font-size: 1rem;
+    color: var(--text-color-general); /* Light text for lighter section */
+    line-height: 1.5;
+}
+
+
+/* Education Section - Collapsible Accordion */
+#education {
+    background-color: var(--medium-dark-bg); /* Slightly transparent Deep Navy */
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color-general); /* Light text for this dark section */
+}
+
+.accordion-item {
+    background-color: var(--card-background); /* Card background */
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: box-shadow var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.accordion-item:hover {
+    box-shadow: 0 10px 25px rgba(0, 188, 212, 0.2); /* Primary color shadow */
+    transform: translateY(-5px);
+}
+
+.accordion-button {
+    background-color: var(--card-background) !important; /* Card background */
+    color: var(--heading-color-general) !important; /* Light heading for dark section */
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 20px 25px;
+    border-bottom: 1px solid var(--border-color) !important;
+    box-shadow: none !important;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--primary-color) !important; /* Primary color for active */
+    color: var(--heading-color-general) !important; /* Light text on active button */
+    border-bottom-color: var(--secondary-color) !important;
+}
+
+.accordion-button:focus {
+    outline: 0;
+    border-color: var(--accent-glow-color) !important;
+    box-shadow: 0 0 0 0.25rem rgba(0, 229, 255, 0.25) !important;
+}
+
+.accordion-button::after {
+    filter: invert(1); /* Ensure toggler icon is light on dark background */
+}
+
+.accordion-body {
+    background-color: var(--card-background); /* Card background */
+    color: var(--text-color-general); /* Light text for dark section */
+    padding: 20px 25px;
+    font-size: 1.05rem;
+}
+
+.accordion-body p {
+    margin-bottom: 8px;
+}
+.accordion-body p strong {
+    color: var(--primary-color); /* Primary color for strong text */
+}
+
+
+/* Projects Section */
+#projects {
+    background-color: transparent; /* Transparent, relies on body::before overlay */
+    color: var(--text-color-general); /* Light text for this section */
+}
+
+.project-card {
+    background-color: var(--card-background); /* Card background */
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 188, 212, 0.4); /* Primary color shadow */
+}
+
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+    transition: transform 0.5s ease;
+}
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+.project-card-body {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card-body h5 {
+    color: var(--heading-color-general); /* Light heading for lighter section */
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Light shadow for light text */
+}
+
+.project-card-body p {
+    font-size: 0.98rem;
+    color: var(--text-color-general); /* Light text for lighter section */
+    margin-bottom: 20px;
+    flex-grow: 1;
+    line-height: 1.7;
+}
+
+.project-links a {
+    margin-right: 15px;
+    color: var(--secondary-color); /* Secondary color for links */
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color var(--transition-speed) ease, transform var(--transition-speed) ease;
+    text-decoration: none;
+}
+
+.project-links a:hover {
+    color: var(--primary-color); /* Primary color on hover */
+    transform: translateY(-2px);
+}
+.project-links a i {
+    margin-right: 5px;
+}
+
+
+/* Certifications Section */
+#certifications {
+    background-color: var(--medium-dark-bg); /* Slightly transparent Deep Navy */
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color-general); /* Light text for this dark section */
+}
+
+.certification-item {
+    background-color: var(--card-background); /* Card background */
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.certification-item:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0, 188, 212, 0.3); /* Primary color shadow */
+}
+
+.certification-icon {
+    font-size: 2.8rem;
+    color: var(--primary-color); /* Primary color icon */
+    margin-right: 25px;
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.7); /* Primary color glow */
+    min-width: 45px;
+}
+
+.certification-details h5 {
+    color: var(--heading-color-general); /* Light heading for dark section */
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.certification-details p {
+    margin: 0;
+    color: var(--text-color-general); /* Light text for dark section */
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Contact Section */
+#contact {
+    background-color: transparent; /* Transparent, relies on body::before overlay */
+    color: var(--text-color-general); /* Light text for this section */
+}
+
+.contact-info {
+    background-color: var(--card-background); /* Card background */
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info h4 {
+    color: var(--heading-color-general); /* Light heading for lighter section */
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.contact-info p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    color: var(--text-color-general); /* Light text for lighter section */
+}
+
+.contact-info p i {
+    color: var(--secondary-color); /* Secondary color for icons */
+    margin-right: 15px;
+    font-size: 1.5rem;
+    min-width: 25px;
+}
+
+.contact-form .form-control {
+    background-color: var(--card-background); /* Card background */
+    border: 1px solid var(--border-color);
+    color: var(--text-color-general); /* Light text input */
+    padding: 12px 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: all var(--transition-speed) ease;
+}
+
+.contact-form .form-control::placeholder {
+    color: rgba(240, 240, 240, 0.7); /* Light placeholder color */
+}
+
+.contact-form .form-control:focus {
+    background-color: rgba(26, 43, 60, 0.99); /* More opaque on focus */
+    border-color: var(--primary-color); /* Primary color border on focus */
+    box-shadow: 0 0 0 0.25rem rgba(0, 188, 212, 0.25);
+    color: var(--text-color-general); /* Light text input on focus */
+}
+
+.contact-form textarea.form-control {
+    min-height: 180px;
+    resize: vertical;
+}
+
+.contact-form .btn {
+    width: 100%;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-base); /* Deep Navy Blue */
+    color: var(--text-color-general); /* Light text for footer */
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.95rem;
+}
+
+/* === Section-specific Animations (on scroll) === */
+
+/* General Fade In Up (for titles and general text blocks) */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity var(--animation-duration) ease-out, transform var(--animation-duration) ease-out;
+}
+.fade-in-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Slide In from Left (for cards/elements) */
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity var(--animation-duration) ease-out, transform var(--animation-duration) ease-out;
+}
+.fade-in-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Slide In from Right (for cards/elements) */
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity var(--animation-duration) ease-out, transform var(--animation-duration) ease-out;
+}
+.fade-in-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Zoom In (for project cards) */
+.zoom-in {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity var(--animation-duration) ease-out, transform var(--animation-duration) ease-out;
+}
+.zoom-in.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* New: Scale-in with Bounce for Skills Section */
+.scale-in-bounce {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity var(--animation-duration) ease-out, transform var(--animation-duration) cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.scale-in-bounce.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* Slide In for Contact section elements */
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity var(--animation-duration) ease-out, transform var(--animation-duration) ease-out;
+}
+.slide-in-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity var(--animation-duration) ease-out, transform var(--animation-duration) ease-out;
+}
+.slide-in-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* Animation delays */
+.delay-1 { transition-delay: 0.1s; animation-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; animation-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; animation-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; animation-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; animation-delay: 0.5s; }
+.delay-6 { transition-delay: 0.6s; animation-delay: 0.6s; }
+.delay-7 { transition-delay: 0.7s; animation-delay: 0.7s; }
+.delay-8 { transition-delay: 0.8s; animation-delay: 0.8s; }
+
+
+/* Responsive adjustments */
+@media (max-width: 1199.98px) {
+    .profile-content h1 {
+        font-size: 4rem;
+    }
+    .profile-content p {
+        font-size: 1.4rem;
+    }
+    .section-heading, .section-heading-flip {
+        font-size: 2.8rem;
+    }
+    .skill-card .skill-icon-colorful {
+        font-size: 3rem;
+    }
+    .skill-card h4 {
+        font-size: 1.4rem;
+    }
+    .skill-card p {
+        font-size: 0.95rem;
+    }
+}
+
+
+@media (max-width: 991.98px) {
+    .navbar-brand {
+        font-size: 1.7rem;
+    }
+    .profile-content h1 {
+        font-size: 3.5rem;
+    }
+    .profile-content p {
+        font-size: 1.25rem;
+    }
+    .profile-image {
+        width: 220px;
+        height: 220px;
+    }
+    .social-icons a {
+        font-size: 2rem;
+        margin: 0 12px;
+    }
+    .section-heading, .section-heading-flip {
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+    }
+    section {
+        padding: 60px 0;
+    }
+    .contact-form, .contact-info {
+        margin-bottom: 30px;
+    }
+    .skill-card {
+        height: 180px;
+    }
+    .skill-card .skill-icon-colorful {
+        font-size: 2.8rem;
+    }
+    .skill-card h4 {
+        font-size: 1.3rem;
+    }
+    .accordion-button {
+        font-size: 1.2rem;
+        padding: 15px 20px;
+    }
+    .project-card-body h5 {
+        font-size: 1.3rem;
+    }
+    .certification-icon {
+        font-size: 2.2rem;
+        margin-right: 15px;
+    }
+    .flip-container {
+        height: 250px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .profile-content h1 {
+        font-size: 3rem;
+    }
+    .profile-content p {
+        font-size: 1.1rem;
+    }
+    .profile-image {
+        width: 180px;
+        height: 180px;
+    }
+    .btn-primary-custom {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+    .section-heading, .section-heading-flip {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    #about-me p {
+        font-size: 1rem;
+    }
+    .skill-card {
+        height: 160px;
+    }
+    .skill-card .skill-icon-colorful {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+    .skill-card h4 {
+        font-size: 1.2rem;
+    }
+    .skill-card p {
+        font-size: 0.85rem;
+    }
+    .accordion-body p, .certification-details p {
+        font-size: 0.9rem;
+    }
+    .project-card-body p {
+        font-size: 0.9rem;
+    }
+    .project-links a {
+        font-size: 1rem;
+    }
+    .contact-info p {
+        font-size: 1.1rem;
+    }
+    .contact-info p i {
+        font-size: 1.3rem;
+    }
+    .flip-container {
+        height: 200px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .profile-content h1 {
+        font-size: 2.5rem;
+    }
+    .profile-content p {
+        font-size: 0.95rem;
+    }
+    .social-icons a {
+        font-size: 1.8rem;
+        margin: 0 8px;
+    }
+    .section-heading, .section-heading-flip {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    .skill-card {
+        height: 150px;
+    }
+    .skill-card .skill-icon-colorful {
+        font-size: 2rem;
+    }
+    .skill-card h4 {
+        font-size: 1.1rem;
+    }
+    .flip-container {
+        height: 180px;
+        padding: 10px;
+    }
+    .back p {
+        font-size: 0.9rem;
+    }
+}

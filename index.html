@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juned Mulla - Portfolio</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#profile">Juned Mulla</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-me">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certifications">Certifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <section id="profile" class="d-flex align-items-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 profile-content text-center">
+                    <img src="images/juned-mulla.jpg" onerror="this.onerror=null;this.src='https://placehold.co/250x250/00ADB5/EDF2F7?text=Juned+Mulla';" alt="Juned Mulla Photo" class="profile-image mb-4 animated-border-pulse">
+                    <h1 class="animated-slide-in">Hi, I'm <span class="text-primary">Juned Mulla</span></h1>
+                    <p class="lead fade-in-up delay-1">A passionate Python Developer | Django Enthusiast | Data Analyst driven to build intelligent and impactful solutions.</p>
+                    <a href="#projects" class="btn btn-primary-custom me-3 mb-2 mb-md-0 fade-in-up delay-2">View My Work</a>
+                    <a href="files/resume.pdf" target="_blank" class="btn btn-outline-light btn-primary-custom fade-in-up delay-3">Download Resume</a>
+                    <div class="social-icons mt-5 fade-in-up delay-4">
+                        <a href="https://linkedin.com/in/juned-mulla" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Juned0085" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="mailto:juneduzer@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Scroll Down Indicator -->
+            <div class="scroll-down">
+                <a href="#about-me" aria-label="Scroll down to About Me">
+                    <i class="fas fa-chevron-down animated-scroll-down"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about-me" class="py-5">
+        <div class="container">
+            <div class="flip-container fade-in-up">
+                <div class="flipper">
+                    <div class="front">
+                        <h2 class="section-heading-flip">About Me</h2>
+                    </div>
+                    <div class="back">
+                        <p>Hello! I'm Juned Mulla, a Computer Engineering graduate from Shri Sanjay Bhokare Group of Institutes (2024). I'm passionate about creating intelligent systems using Python, Django, and data tools. I’ve developed real-time projects including a Voice Assistant, Smart Home Automation, and a WBAN healthcare system. I believe in building smart and impactful solutions that improve lives.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="section-heading fade-in-up">Skills</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <!-- Skill Card 1 - Python -->
+                <div class="col scale-in-bounce delay-1">
+                    <div class="skill-card">
+                        <i class="fab fa-python skill-icon-colorful"></i>
+                        <h4>Python Development</h4>
+                        <p>Proficient in Python for backend development, data analysis, scripting, and automation.</p>
+                    </div>
+                </div>
+                <!-- Skill Card 2 - Django -->
+                <div class="col scale-in-bounce delay-2">
+                    <div class="skill-card">
+                        <i class="fas fa-globe skill-icon-colorful"></i>
+                        <h4>Django Web Framework</h4>
+                        <p>Building robust and scalable web applications with Django, covering MVT architecture and REST APIs.</p>
+                    </div>
+                </div>
+                <!-- Skill Card 3 - SQL -->
+                <div class="col scale-in-bounce delay-3">
+                    <div class="skill-card">
+                        <i class="fas fa-database skill-icon-colorful"></i>
+                        <h4>SQL Databases</h4>
+                        <p>Strong command of SQL for database querying, design, and management (e.g., PostgreSQL, MySQL).</p>
+                    </div>
+                </div>
+                <!-- Skill Card 4 - HTML/CSS -->
+                <div class="col scale-in-bounce delay-4">
+                    <div class="skill-card">
+                        <i class="fas fa-palette skill-icon-colorful"></i>
+                        <h4>HTML/CSS Design</h4>
+                        <p>Crafting engaging and responsive user interfaces with modern HTML5 and CSS3 techniques.</p>
+                    </div>
+                </div>
+                <!-- Skill Card 5 - JavaScript -->
+                <div class="col scale-in-bounce delay-5">
+                    <div class="skill-card">
+                        <i class="fab fa-js skill-icon-colorful"></i>
+                        <h4>JavaScript Development</h4>
+                        <p>Implementing dynamic and interactive web functionalities with JavaScript (ES6+).</p>
+                    </div>
+                </div>
+                <!-- Skill Card 6 - Advanced Excel -->
+                <div class="col scale-in-bounce delay-6">
+                    <div class="skill-card">
+                        <i class="fas fa-file-excel skill-icon-colorful"></i>
+                        <h4>Advanced Excel</h4>
+                        <p>Expertise in data manipulation, analysis, and visualization using advanced Excel features.</p>
+                    </div>
+                </div>
+                <!-- Skill Card 7 - Power BI -->
+                <div class="col scale-in-bounce delay-7">
+                    <div class="skill-card">
+                        <i class="fas fa-chart-bar skill-icon-colorful"></i>
+                        <h4>Power BI</h4>
+                        <p>Creating interactive dashboards and reports for business intelligence with Power BI.</p>
+                    </div>
+                </div>
+                <!-- Skill Card 8 - AI/ML -->
+                <div class="col scale-in-bounce delay-8">
+                    <div class="skill-card">
+                        <i class="fas fa-brain skill-icon-colorful"></i>
+                        <h4>AI/ML Concepts</h4>
+                        <p>Understanding and applying fundamental Artificial Intelligence and Machine Learning concepts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-5">
+        <div class="container">
+            <h2 class="section-heading fade-in-up">Education</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="educationAccordion">
+                         <!-- B.Tech in Computer Engineering (Top) -->
+                        <div class="accordion-item fade-in-right delay-1">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    B.Tech in Computer Engineering
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#educationAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Institute:</strong> Shri Sanjay Bhokare Group of Institutes, Miraj</p>
+                                    <p><strong>Year:</strong> 2024</p>
+                                    <p><strong>CGPA:</strong> 7.92</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Diploma in Civil Engineering (Mid) -->
+                        <div class="accordion-item fade-in-left delay-2">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Diploma in Civil Engineering
+                                </button>
+                            </h4>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#educationAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Institute:</strong> Shri Chimasaheb Jagdale Institute of Technology</p>
+                                    <p><strong>Year:</strong> 2019</p>
+                                    <p><strong>Percentage:</strong> 77%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 10th SSC (Bottom) -->
+                        <div class="accordion-item fade-in-right delay-3">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    10th SSC
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#educationAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>School:</strong> Jawahar High School and Junior College, Miraj</p>
+                                    <p><strong>Year:</strong> 2014</p>
+                                    <p><strong>Percentage:</strong> 73%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="section-heading fade-in-up">Projects</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <!-- Project Card 1 - Voice Assistant -->
+                <div class="col zoom-in delay-1">
+                    <div class="project-card">
+                        <img src="images/project-voice-assistant.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400/2C3440/EDF2F7?text=Voice+Assistant';" alt="Voice Assistant Project">
+                        <div class="project-card-body">
+                            <h5>Voice Assistant using Python</h5>
+                            <p>Desktop assistant with voice commands for web browsing, application control, and various automation tasks, enhancing productivity through intuitive voice interaction.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Juned0085/Voice-Assistant-using-Python" target="_blank" class="btn btn-sm btn-outline-primary-custom"><i class="fab fa-github me-2"></i> View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 2 - Smart Home Automation -->
+                <div class="col zoom-in delay-2">
+                    <div class="project-card">
+                        <img src="images/project-smart-home.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400/2C3440/EDF2F7?text=Smart+Home';" alt="Smart Home Automation Project">
+                        <div class="project-card-body">
+                            <h5>Smart Home Automation</h5>
+                            <p>A system to control home appliances using Python scripts and an Android application, offering real-time automation and remote management capabilities.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Juned0085/Smart-Home-Automation" target="_blank" class="btn btn-sm btn-outline-primary-custom"><i class="fab fa-github me-2"></i> View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 3 - WBAN Healthcare -->
+                <div class="col zoom-in delay-3">
+                    <div class="project-card">
+                        <img src="images/project-team-manager.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400/2C3440/EDF2F7?text=WBAN+Healthcare';" alt="WBAN Healthcare Project">
+                        <div class="project-card-body">
+                            <h5>Team Manager – Smart Task & Project Management System</h5>
+                            <p>Team Manager is a web-based project and task management system with role-based access, built using Django. It helps teams efficiently manage tasks, track progress, and collaborate in real time.
+
+</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Juned0085/WBAN_Healthcare_Monitoring_System" target="_blank" class="btn btn-sm btn-outline-primary-custom"><i class="fab fa-github me-2"></i> View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-5">
+        <div class="container">
+            <h2 class="section-heading fade-in-up">Certifications</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Certification Item 1 - Python -->
+                    <div class="certification-item fade-in-left delay-1">
+                        <i class="fas fa-code certification-icon"></i>
+                        <div class="certification-details">
+                            <h5>Python Programming – Cisco</h5>
+                            <p>Completed comprehensive training in Python fundamentals and advanced concepts.</p>
+                        </div>
+                    </div>
+                    <!-- Certification Item 2 - Advanced SQL -->
+                    <div class="certification-item fade-in-right delay-2">
+                        <i class="fas fa-database certification-icon"></i>
+                        <div class="certification-details">
+                            <h5>Advanced SQL – Udemy</h5>
+                            <p>Demonstrated expertise in complex SQL queries, database manipulation, and optimization.</p>
+                        </div>
+                    </div>
+                    <!-- Certification Item 3 - Data Analytics -->
+                    <div class="certification-item fade-in-left delay-3">
+                        <i class="fas fa-chart-line certification-icon"></i>
+                        <div class="certification-details">
+                            <h5>Data Analytics – Nasscom </h5>
+                            <p>Certified in Data Analytics with hands-on experience in data cleaning, visualization, and deriving insights using tools like Excel, SQL, and Python libraries (Pandas, Matplotlib, Seaborn).
+
+</p>
+                        </div>
+                    </div>
+                    <!-- Certification Item 4 - Excel -->
+                    <div class="certification-item fade-in-right delay-4">
+                        <i class="fas fa-file-invoice certification-icon"></i>
+                        <div class="certification-details">
+                            <h5>Excel – LinkedIn Learning</h5>
+                            <p>Mastered advanced Excel functions for data analysis, modeling, and presentation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="section-heading fade-in-up">Contact Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 mb-4 mb-lg-0 slide-in-left delay-1">
+                    <div class="contact-info text-center">
+                        <h4>Get in Touch</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> Miraj, Maharashtra, India</p>
+                        <p><i class="fas fa-envelope"></i> juneduzer@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +91 9370960085</p>
+                        <div class="social-icons mt-4">
+                            <a href="https://linkedin.com/in/juned-mulla" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/Juned0085" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="files/resume.pdf" target="_blank" class="btn btn-primary-custom-small d-inline-flex align-items-center mt-3" aria-label="Download Resume"><i class="fas fa-file-alt me-2"></i> Resume</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 slide-in-right delay-2">
+                    <form class="contact-form" id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label visually-hidden">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label visually-hidden">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label visually-hidden">Subject</label>
+                            <input type="text" class="form-control" id="subject" placeholder="Subject">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label visually-hidden">Message</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary-custom">Send Message</button>
+                    </form>
+                    <div id="formMessage" class="mt-3 text-center" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Juned Mulla. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
